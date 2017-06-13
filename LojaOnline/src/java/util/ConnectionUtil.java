@@ -3,22 +3,22 @@ package util;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
-import javax.swing.JOptionPane;
 
 public class ConnectionUtil {
+
     private static Connection connection;
-    public static Connection getConnection() 
-        throws ClassNotFoundException, SQLException {
+
+    public static Connection getConnection()
+            throws ClassNotFoundException, SQLException {
         /**
          * Verifica se a conexão está ativa
          */
-        if (connection == null)
-        {
+        if (connection == null) {
             // Carregar o Driver JDBC
             Class.forName("org.firebirdsql.jdbc.FBDriver");
             /**
-             * Conectar ao Banco de Dados
-             * URL: jdbc:nomeDoProduto:servidor:porta:nomeDoBanco
+             * Conectar ao Banco de Dados URL:
+             * jdbc:nomeDoProduto:servidor:porta:nomeDoBanco
              */
             String url = "jdbc:firebirdsql:192.168.56.101/3050:/databases/lojaonline.fdb";
             String usuario = "SYSDBA";

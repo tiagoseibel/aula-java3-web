@@ -67,7 +67,7 @@ public class ProdutoController extends HttpServlet {
             ProdutoDAO dao = new ProdutoDAO();
 
             if (formAction.equals("inserir")) {
-                dao.insert(produto);
+                dao.inserir(produto);
             } else if (formAction.equals("editar")) {
                 dao.editar(produto);
             } else if (formAction.equals("excluir")) {

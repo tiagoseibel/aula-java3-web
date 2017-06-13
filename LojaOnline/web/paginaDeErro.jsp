@@ -6,6 +6,6 @@
         <title>Página de Erros</title>
     </head>
     <body>
-        <h1><%=exception.getMessage() %></h1>
+        <h1><%=exception.getMessage()%></h1>
     </body>
 </html>

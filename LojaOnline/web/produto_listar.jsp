@@ -6,7 +6,7 @@
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
         <title>Lista de Produtos</title>
         <script type="text/javascript">
-            function excluir(formProduto){
+            function excluir(formProduto) {
                 var opt = confirm('Are you sure?');
                 if (opt) {
                     formProduto.form_action.value = 'excluir';
@@ -27,15 +27,15 @@
             <br>
             Qtd. em estoque: <input type="text" name="qtd_estoque" value="${prd.qtdEstoque}">
             <br>
-            
+
             <c:if test="${prd.codigo > 0}">
                 <input type="hidden" name="form_action" value="editar" />
             </c:if>
-            
+
             <c:if test="${prd == null}">
                 <input type="hidden" name="form_action" value="inserir" />
             </c:if>
-                
+
             <input type="submit" value="Gravar">            
             <input type="reset" value="Cancelar">
             <input type="button" value="Excluir" onclick="excluir(this.form);">
@@ -53,15 +53,15 @@
                 </tr>
             </thead>
             <tbody>
-            <c:forEach items="${produtos}" var="item">
-                <tr>
-                    <td>${item.codigo}</td>
-                    <td>${item.nome}</td>
-                    <td>${item.preco}</td>
-                    <td>${item.desconto}</td>
-                    <td>${item.qtdEstoque}</td>
-                    <td><a href="/lojaonline/produto?codigo=${item.codigo}">Selecionar</a></td>
-                </tr>
+                <c:forEach items="${produtos}" var="item">
+                    <tr>
+                        <td>${item.codigo}</td>
+                        <td>${item.nome}</td>
+                        <td>${item.preco}</td>
+                        <td>${item.desconto}</td>
+                        <td>${item.qtdEstoque}</td>
+                        <td><a href="/lojaonline/produto?codigo=${item.codigo}">Selecionar</a></td>
+                    </tr>
                 </c:forEach>
             </tbody>
         </table>
