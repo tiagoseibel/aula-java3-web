@@ -7,6 +7,7 @@ public class Produto {
     private double preco;
     private double desconto;
     private int qtdEstoque;
+    private String nome2;
 
     public int getCodigo() {
         return codigo;

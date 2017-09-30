@@ -36,6 +36,7 @@ public class ProdutoController extends HttpServlet {
                         = dao.buscarPorCodigo(Integer.parseInt(codigo));
                 // Envia o atributo para o JSP
                 request.setAttribute("prd", produto);
+                
             }
 
             // Envia para o JSP
